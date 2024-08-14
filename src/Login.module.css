@@ -1,0 +1,37 @@
+/* Login.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    gap: 1px; /* 요소 간의 간격을 좁게 설정 */
+    font-size: 0;
+    line-height: 0;
+}
+
+h1 {
+    margin-top: 8px;
+    font-size: 70px; /* 텍스트 크기 */
+    color: white; /* 텍스트 색상 */
+    margin-bottom: 100px; /* 아래쪽 여백 */
+}
+
+.button {
+    background-color: transparent; /* 버튼 배경 투명 */
+    border: 1px solid white; /* 바깥 라인 */
+    padding: 10px 7px ; /* 버튼 가로 길이를 늘림 */
+    font-size: 20px; /* 텍스트 크기 */
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease; /* 마우스 호버 시 애니메이션 효과 */
+    width: 350px; /* 버튼 가로 길이 고정 */
+    height: 60px;
+    margin : 10px;
+}
+
+.button:hover {
+    background-color: #333; /* 호버 시 배경색 변경 */
+    color: #fff; /* 호버 시 텍스트 색상 변경 */
+}
