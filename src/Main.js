@@ -11,9 +11,13 @@ export default function Main() {
     const model = gltf.scene;
     const navigate = useNavigate();
 
-    function onClick(){
+    function clickLogin(){
         console.log("play now button clicked");
         navigate('/login');
+    }
+
+    function clickRanking(){
+        navigate('/Ranking');
     }
 
     return (
@@ -30,9 +34,8 @@ export default function Main() {
             <Html center>
                 <div className="centered-container">
                     <h1>CosmicMiner</h1>
-                    <button className="button" onClick={onClick}>
-                        Login
-                    </button>
+                    <button className="button" onClick={clickLogin}>Login</button> 
+                    <button className="button" onClick={clickRanking} >Ranking</button>
                 </div>
             </Html>
         </>
