@@ -2,15 +2,18 @@ import React from 'react';
 import { Html } from '@react-three/drei';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import {useNavigate} from 'react-router-dom';
 import './Main.module.css';
 
 export default function Main() {
 
     const gltf = useLoader(GLTFLoader, '/planet.gltf');
     const model = gltf.scene;
+    const navigate = useNavigate();
 
     function onClick(){
         console.log("play now button clicked");
+        navigate('/login');
     }
 
     return (
@@ -26,9 +29,9 @@ export default function Main() {
             {/* HTML 요소 */}
             <Html center>
                 <div className="centered-container">
-                    <h1>Game from Tree</h1>
+                    <h1>CosmicMiner</h1>
                     <button className="button" onClick={onClick}>
-                        Play now
+                        Login
                     </button>
                 </div>
             </Html>

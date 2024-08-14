@@ -4,6 +4,13 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Main from './Main';
 import Particle from './Particle';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Login from './Login';
+import Ranking from './Ranking';
 
 function App() {
   return (
@@ -11,8 +18,17 @@ function App() {
       <Particle />
       <Canvas style={{ position: 'relative', zIndex: 0 }}>
         <OrbitControls />
-        <Main />
+        <Router>
+          <Routes>
+            <Route path="/" element = {<Main/>} />
+            <Route path="/login" element = {<Login />} />
+            <Route path="/Ranking" element = {<Ranking />} />
+          </Routes>
+        </Router>
+        
       </Canvas>
+
+     
     </div>
   );
 }
