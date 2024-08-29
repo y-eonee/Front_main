@@ -2,6 +2,7 @@ import React from "react";
 import { Html } from '@react-three/drei';
 import styles from "./Login.module.css";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import { Canvas } from "@react-three/fiber";
 import GoogleLogin from "./GoogleLogin";
 import KakaoLogin from "./KakaoLoogin";
 
@@ -9,6 +10,7 @@ export default function Login() {
     
 
     return (
+        <Canvas>
         <Html center>
             <div className={styles.container}>
                 <h1 className={styles.title}>Login</h1>
@@ -18,5 +20,6 @@ export default function Login() {
                 </GoogleOAuthProvider>
             </div>
         </Html>
+        </Canvas>
     );
 }
