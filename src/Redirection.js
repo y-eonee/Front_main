@@ -11,7 +11,7 @@ export default function Redirection(){
             const res = await axios.get(`api/code=${code}`);
             const token = res.headers.authorization;
             window.localStorage.setItem('token', token);
-            navigate('/loginSuccess');
+            navigate('/InGame');
           } catch (e) {
             console.error(e);
             navigate('/main');
