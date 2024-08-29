@@ -1,7 +1,6 @@
 import './InGame.css';
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Html } from '@react-three/drei';
 import { Physics } from '@react-three/cannon';
 import { Ground } from './components/Ground';
 import { Player } from './components/Player';
@@ -18,11 +17,7 @@ function InGame() {
     <GameProvider>
       <Canvas shadows>
         <NightSky />
-        <pointLight
-          position={[5, 2, 0.2]}
-          intensity={20}
-          distance={10}
-        />
+        <pointLight position={[5, 2, 0.2]} intensity={20} distance={10} />
         <FPV />
         <TextComponent />
         <Physics>
@@ -32,26 +27,24 @@ function InGame() {
           <Crystal />
           <Building />
         </Physics>
-        <Html>
-          <div className='centered cursor'>+</div>
-        </Html>
-        <GameText />
       </Canvas>
+      <FixedUI />
     </GameProvider>
   );
 }
 
-const GameText = () => {
+const FixedUI = () => {
   const { cubesRemoved, crystalMelted, weaponMade } = useGameContext();
 
   return (
-    <Html>
+    <>
+      <div className='centered cursor'>+</div>
       <div className='overlay-text'>
-        {'💎 Crystal Cube ---- ' + cubesRemoved}<br/>
-        {'🫧 Melted Crystal -- ' + crystalMelted}<br/>
+        {'💎 Crystal Cube ---- ' + cubesRemoved}<br />
+        {'🫧 Melted Crystal -- ' + crystalMelted}<br />
         {'🗡️ Weapon -------- ' + weaponMade}
       </div>
-    </Html>
+    </>
   );
 };
 
