@@ -10,7 +10,7 @@ export default function GoogleLogin() {
     onSuccess: async ({ code }) => {
       try {
         // const response = await axios.post("http://localhost:8080/login/oauth2/code/google", { code });
-        const response = await axios.post(`http://${BACKEND_IP}/login/oauth2/code/google`, { code });
+        const response = await axios.post(`${BACKEND_IP}/login/oauth2/code/google`, { code });
         // Assuming the server response includes a redirection URL
         const redirectUrl = response.data.redirectUrl;
         if (redirectUrl) {
