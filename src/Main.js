@@ -20,6 +20,10 @@ export default function Main() {
         navigate('/Ranking');
     }
 
+    function clickGame(){
+        navigate('/InGame');
+    }
+
     return (
         <>       
             <ambientLight color={'#ffffff'} intensity={3} />
@@ -34,6 +38,7 @@ export default function Main() {
             <Html center>
                 <div className="centered-container">
                     <h1>CosmicMiner</h1>
+                    <button className="button" onClick={clickGame}>Start</button> 
                     <button className="button" onClick={clickLogin}>Login</button> 
                     <button className="button" onClick={clickRanking} >Ranking</button>
                 </div>

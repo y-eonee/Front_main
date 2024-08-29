@@ -6,6 +6,7 @@ import Main from './Main';
 import Particle from './Particle';
 import Redirection from './Redirection';
 import LoginSuccess from './LoginSuccess';
+import InGame from './InGame';
 
 import {
   BrowserRouter as Router,
@@ -27,7 +28,7 @@ function App() {
             <Route path="/login" element = {<Login />} />
             <Route path="/Ranking" element = {<Ranking />} />
             <Route path='/login/oauth/kakao' element={<Redirection />}/>
-            <Route path="/loginSuccess" element = {<LoginSuccess/> } />
+            <Route path="/InGame" element = {<InGame/> } />
           </Routes>
         </Router>
         
